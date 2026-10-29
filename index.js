@@ -1,4 +1,4 @@
-requestAnimationFrame('datejs')
+require('datejs')
 
 
 module.exports = {
@@ -14,11 +14,9 @@ function combineUsers(...args){
   combinedObject.users = [...combinedObject.users, ...item]
 }
 
-function mergeDate(date){
-  date.forEach(item => {
-    console.log(Date.parse(item.date).toString("hh:mmtt MMMM dS. yyyy"))
-  })
-}
+combinedObject.merge_date = Date.today().toString("M/d/yyyy");
 
 return(combinedObject)
-};
+}
+
+ 
